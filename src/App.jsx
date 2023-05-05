@@ -1,11 +1,18 @@
-import './App.css'
+import { Hero, Main, Footer} from "./components";
 
-const App= ()=>{
+const App = () => {
   return (
-    <>
-    <h2 className="text-2xl">Hi</h2>
-    </>
-  )
-}
+    <main>
+      <div className="main">
+        <div className="gradient"/>
+      </div>
+      <div className="app">
+        <Hero/>
+        <Main/>
+      </div>
+      <Footer/>
+    </main>
+  );
+};
 
-export default App
+export default App;
