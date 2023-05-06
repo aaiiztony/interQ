@@ -2,49 +2,30 @@ import { Typography } from "@mui/material";
 import {logo} from '../assets'
 
 const Footer = () => {
+  const forwardURL = (url) =>{
+    window.open(url, '_blank')
+  }
   return (
     <footer className="w-full bg-white p-8">
       <div className="flex flex-col flex-wrap items-center md:flex-row  md:justify-between gap-y-6 gap-x-12 text-center">
-        <img src={logo} alt="logo-img" className="w-20" />
+        <img src={logo} alt="logo-img" className="w-20 max-md:hidden" />
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
             <Typography
-              as="a"
-              href="#"
+            onClick = {()=> forwardURL('https://aaiiztony.netlify.app')}
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              About Us
+              About
             </Typography>
           </li>
           <li>
             <Typography
-              as="a"
-              href="#"
+              onClick={()=>forwardURL('https://github.com/aaiiztony/interQ')}
               color="blue-gray"
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
             >
-              License
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              Contribute
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              Contact Us
+              Github
             </Typography>
           </li>
         </ul>
